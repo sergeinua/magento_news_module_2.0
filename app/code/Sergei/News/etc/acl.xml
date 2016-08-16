@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::content">
+                    <resource id="Sergei_News::news_content" title="News" sortOrder="10" >
+                        <resource id="Sergei_News::post" title="News Posts" sortOrder="40">
+                            <resource id="Sergei_News::save" title="Save News Post" sortOrder="10" />
+                            <resource id="Sergei_News::post_delete" title="Delete News Post" sortOrder="20" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
