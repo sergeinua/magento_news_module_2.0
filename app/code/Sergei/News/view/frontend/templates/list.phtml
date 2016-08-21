@@ -1,20 +1,24 @@
 <?php /** @var $block \Sergei\News\Block\PostList */ ?>
 <h1><?php echo __('Latest News Posts'); ?></h1>
-<ul class="blog-post-list">
-    <?php /** @var $post \Sergei\News\Model\Post */ ?>
-    <?php foreach ($block->getPosts() as $post) : ?>
-        <li class="blog-post-list-item">
-            <h3 class="blog-post-item-title">
-                <a href="<?php echo $post->getUrlKey(); ?>"><?php echo $post->getTitle(); ?></a>
-            </h3>
+<div class="row">
+    <div class="col-md-6 col-md-offset-1">
+        <ul class="blog-post-list">
+            <?php /** @var $post \Sergei\News\Model\Post */ ?>
+            <?php foreach ($block->getPosts() as $post) : ?>
+                <li class="blog-post-list-item">
+                    <h3 class="blog-post-item-title">
+                        <a href="<?php echo $post->getUrlKey(); ?>"><?php echo $post->getTitle(); ?></a>
+                    </h3>
 
-            <div class="blog-post-item-content">
-                <?php echo $post->getContent(); ?>
-            </div>
+                    <div class="blog-post-item-content">
+                        <?php echo $post->getContent(); ?>
+                    </div>
 
-            <div class="blog-post-item-meta">
-                <strong><?php echo __('Created at:'); ?></strong> <?php echo $post->getCreationTime(); ?>
-            </div>
-        </li>
-    <?php endforeach; ?>
-</ul>
+                    <div class="blog-post-item-meta">
+                        <strong><?php echo __('Created at:'); ?></strong> <?php echo $post->getCreationTime(); ?>
+                    </div>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>

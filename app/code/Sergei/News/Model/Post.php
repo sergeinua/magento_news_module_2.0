@@ -110,11 +110,12 @@ class Post  extends \Magento\Framework\Model\AbstractModel implements PostInterf
      */
     public function getContent()
     {
-        $display_symbols = 3;
+        //$display_symbols = 3;
         //$display_symbols = $this->_scopeConfig->getValue('sergei_news/general/content_quan', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
         //can't get correctly the value of that variable
 
-        return mb_substr($this->getData(self::CONTENT), 0, $display_symbols, 'utf-8');
+//        return mb_substr($this->getData(self::CONTENT), 0, $display_symbols, 'utf-8');
+        return $this->getData(self::CONTENT);
     }
 
     /**
